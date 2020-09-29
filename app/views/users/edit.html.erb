@@ -2,8 +2,8 @@
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
       <h2>ユーザー情報の編集</h2>
-      <%= link_to "ログアウト", "#", class: 'btn'%>
-      <%= link_to "トップページに戻る", :back, class: 'btn'%>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+      <%= link_to "トップページに戻る", root_url, class: 'btn'%>
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: current_user, local: true do |f|%>
