@@ -6,13 +6,15 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <div id="page">
+    <%# div id="page" %>
       <%= render 'layouts/header' %>
-      <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>
-      <%= yield %>
-    </div>
-    <%= render 'layouts/footer' %>
+      <%# flash.each do |message_type, message| %>
+        <%#= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <%# end %>
+      <div class="container">
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+      </div>
+    <%# /div %>
   </body>
 </html>
