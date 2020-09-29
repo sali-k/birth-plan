@@ -64,7 +64,7 @@
 | email            | string | null: false, default: "", |
 |                  |        | unique: true              |
 | introduction     | text   |                           |
-| relationship     | string | null: false               |
+| relationship     | string |                           |
 | birth_date       | date   |                           |
 
 ### Association
