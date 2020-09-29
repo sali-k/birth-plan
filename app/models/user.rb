@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, length: { maximum: 20 }
-  
-  validates :email, presence: true, format: { with: /\A\S+@\S+\.\S+\z/, message: 'は@を含むアドレスを入力してください' }
+
+  validates :email, format: { with: /\A\S+@\S+\.\S+\z/, message: 'は@を含むアドレスを入力してください' }
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,}+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて、8文字以上で設定してください'
