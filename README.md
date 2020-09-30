@@ -65,7 +65,6 @@
 |                  |        | unique: true              |
 | introduction     | text   |                           |
 | relationship     | string |                           |
-| birth_date       | date   |                           |
 
 ### Association
 - has_many :births
