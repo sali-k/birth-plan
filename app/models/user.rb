@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, length: { maximum: 20 }
+  validates :introduction, length: { maximum: 200 }
 
   validates :email, format: { with: /\A\S+@\S+\.\S+\z/, message: 'は@を含むアドレスを入力してください' }
 
