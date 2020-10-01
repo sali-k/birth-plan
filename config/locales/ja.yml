@@ -1,0 +1,7 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: ユーザーネーム
+       introduction: 自己紹介
+       relationship: 妊婦さんからみた続柄

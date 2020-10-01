@@ -64,8 +64,7 @@
 | email            | string | null: false, default: "", |
 |                  |        | unique: true              |
 | introduction     | text   |                           |
-| relationship     | string | null: false               |
-| birth_date       | date   |                           |
+| relationship     | string |                           |
 
 ### Association
 - has_many :births

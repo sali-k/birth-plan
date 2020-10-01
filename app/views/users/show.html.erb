@@ -1,0 +1,24 @@
+
+<div class="container">
+  <h3 class="title-profile">プロフィール</h3>
+  <div class="row">
+    <div class="col-md-8">
+      <h4 class="show-user-name"><%= @user.name %></h4>
+      <P> (<%= @user.relationship %>) </P>
+      <div>
+        <%= @user.introduction %>
+      </div>
+      <% if user_signed_in? && current_user[:id] == @user.id%>
+        <div class="account-edit">
+          <%= link_to "ユーザー情報編集", edit_user_registration_path(current_user), class:"btn" %>
+          <%=link_to 'もどる', root_path, class:"btn" %>
+        </div>
+      <% else %>
+        <div class="account-edit">
+          <%=link_to 'もどる', root_path, class:"btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

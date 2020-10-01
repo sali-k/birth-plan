@@ -80,6 +80,21 @@ footer {
   }
 }
 
+/* プロフィールページ */
+.title-profile {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.show-user-name {
+  display: inline-block;
+}
+
+.account-edit {
+  margin-top: 20px;
+}
+
+/* トップページ */
 .title-contents {
   width: 100vw;
   background-image: image-url('baby_photo.jpg');
