@@ -6,7 +6,7 @@
       <%= link_to "トップページに戻る", root_url, class: 'btn'%>
     </div>
     <div class='account-page__inner--right user-form'>
-      <%= form_with model: current_user, local: true do |f|%>
+      <%= form_with(model: current_user, local: true) do |f| %>
         <div class='field'>
           <div class='field-label'>
             <%= f.label :name%>
@@ -37,6 +37,14 @@
           </div>
           <div class='field-input'>
             <%= f.text_area :introduction%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :password%><p>本人確認の為、登録したパスワードを入力してください。</p>
+          </div>
+          <div class='field-input'>
+            <%= f.password_field :password%>
           </div>
         </div>
         <div class='actions'>
