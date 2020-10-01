@@ -40,13 +40,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   protected
 
-  #更新（編集の反映）時にパスワード入力を省く
+  # 更新（編集の反映）時にパスワード入力を省く
   def update_resource(resource, params)
     resource.update_without_password(params)
   end
 
   # アカウント編集後、プロフィール画面に移動する
-  def after_update_path_for(resource)
+  def after_update_path_for(_resource)
     user_path(id: current_user.id)
   end
 
