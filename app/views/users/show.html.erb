@@ -8,11 +8,17 @@
       <div>
         <%= @user.introduction %>
       </div>
-      <% if current_user == @user %>
+      <% if user_signed_in? && current_user[:id] == @user.id%>
         <div class="account-edit">
-          <%= link_to "ユーザー情報編集", edit_user_registration_path(current_user) %>
+          <%= link_to "ユーザー情報編集", edit_user_registration_path(current_user), class:"btn" %>
+          <%=link_to 'もどる', root_path, class:"btn" %>
+        </div>
+      <% else %>
+        <div class="account-edit">
+          <%=link_to 'もどる', root_path, class:"btn" %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+
