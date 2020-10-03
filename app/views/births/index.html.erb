@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Myバースプラン一覧</h1>
+    <% @births.each do |birth| %>
+      <%= link_to birth_path(birth.id) do %>
+        <h3><%= birth.plan_name %></h3>
+      <% end %>
+      <span class="name">
+        <%= birth.thought %>
+      </span>
+    <% end %>
+</div>

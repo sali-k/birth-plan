@@ -12,6 +12,17 @@
     <div class='store-btn'>
       <%#= link_to image_tag(".png", class:"apple-btn"), "#" %>
       <%#= link_to image_tag(".png", class:"google-btn"), "#" %>
+      <% if user_signed_in? %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "バースプラン作成", new_birth_path, class: "btn btn-primary btn-lg btn-record" %></li>
+          <li><%= link_to "Myバースプラン", births_path(:id), class: "btn btn-primary btn-lg btn-record" %></li>
+        </ul>
+      <% else %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
+          <li><%= link_to "ユーザー登録", new_user_registration_path, class: "post" %></li>
+        </ul>
+      <% end %>
     </div>
   </center>
 </div>

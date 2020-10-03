@@ -1,7 +1,17 @@
 ja:
- activerecord:
-   attributes:
-     user:
-       name: ユーザーネーム
-       introduction: 自己紹介
-       relationship: 妊婦さんからみた続柄
+  activerecord:
+    attributes:
+      user:
+        name: ユーザーネーム
+        introduction: 自己紹介
+        relationship: 妊婦さんからみた続柄
+      birth:
+        plan_name: Myバースプラン名
+        thought: お産に対するイメージや想い
+        hope_id: 立ち合い分娩の希望
+        attend_id: 立ち合い分娩をする人
+        contraction: 陣痛中の過ごし方
+        childbirth: 赤ちゃんが生まれたときにしたいこと（分娩室にて）
+        breastfeeding_id: 授乳に対する希望
+        postpartum: お産後の過ごし方や育児への希望
+        memo: メモ

@@ -7,7 +7,7 @@
         <% if user_signed_in? %>
           <li><%= link_to current_user.name, user_path(current_user) %></li>
           <li><%= link_to "メンバー", users_path, class: "post" %></li>
-          <li><%= link_to "Myバースプラン", "#", class: "post" %></li>
+          <li><%= link_to "Myバースプラン作成", new_birth_path, class: "post" %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
