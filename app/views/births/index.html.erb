@@ -1,10 +1,11 @@
-<div class="contents row">
-  <% @births.each do |birth| %>
-    <%#div class="content_post" style="background-image: url(<%= birth.image %>);">
-      <p><%#= birth.text %></p>
+<div class="container">
+  <h1>Myバースプラン一覧</h1>
+    <% @births.each do |birth| %>
+      <%= link_to birth_path(birth.id) do %>
+        <h3><%= birth.plan_name %></h3>
+      <% end %>
       <span class="name">
-        <%= birth.plan_name %>
+        <%= birth.thought %>
       </span>
-    </div>
-  <% end %>
+    <% end %>
 </div>
