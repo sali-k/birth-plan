@@ -19,5 +19,4 @@ class Birth < ApplicationRecord
     validates :attend_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :breastfeeding_id, numericality: { other_than: 0, message: 'を選択してください' }
   end
-
 end

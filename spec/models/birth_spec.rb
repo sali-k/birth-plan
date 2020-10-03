@@ -63,6 +63,5 @@ RSpec.describe Birth, type: :model do
       @birth.valid?
       expect(@birth.errors.full_messages).to include('メモは1000文字以内で入力してください')
     end
-
   end
 end

@@ -1,6 +1,6 @@
 class BirthsController < ApplicationController
   def index
-    @births = Birth.all.order("created_at DESC")
+    @births = Birth.all.order('created_at DESC')
   end
 
   def new
@@ -10,7 +10,7 @@ class BirthsController < ApplicationController
   def create
     @birth = Birth.new(birth_params)
     if @birth.save
-      flash[:success] = "Myバースプランが登録されました！"
+      flash[:success] = 'Myバースプランが登録されました！'
       redirect_to root_path
     else
       render :new
@@ -22,6 +22,7 @@ class BirthsController < ApplicationController
   end
 
   private
+
   def birth_params
     params.require(:birth).permit(:plan_name, :thought, :hope_id, :attend_id, :contraction, :breastfeeding_id, :childbirth, :postpartum, :memo).merge(user_id: current_user.id)
   end
