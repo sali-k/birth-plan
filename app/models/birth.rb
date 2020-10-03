@@ -6,4 +6,6 @@ class Birth < ApplicationRecord
     validates :description, length: { maximum: 1000 }
     validates :hope_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :attend_id, numericality: { other_than: 0, message: 'を選択してください' }
+  end
+  
 end
