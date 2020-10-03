@@ -7,7 +7,6 @@ class CreateBirths < ActiveRecord::Migration[6.0]
       t.integer :hope_id,   null: false
       t.integer :attend_id, null: false
       t.text :contraction
-      t.text :required_time
       t.text :childbirth
       t.text :postpartum
       t.text :memo
