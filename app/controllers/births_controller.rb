@@ -10,6 +10,7 @@ class BirthsController < ApplicationController
   def create
     @birth = Birth.new(birth_params)
     if @birth.save
+      flash[:success] = "Myバースプランが登録されました！"
       redirect_to root_path
     else
       render :new
