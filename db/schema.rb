@@ -15,11 +15,12 @@ ActiveRecord::Schema.define(version: 2020_10_02_120207) do
   create_table "births", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "plan_name", null: false
-    t.text "description", null: false
+    t.text "thought", null: false
     t.integer "hope_id", null: false
     t.integer "attend_id", null: false
     t.text "contraction"
     t.text "childbirth"
+    t.integer "Breastfeeding_id", null: false
     t.text "postpartum"
     t.text "memo"
     t.datetime "created_at", precision: 6, null: false

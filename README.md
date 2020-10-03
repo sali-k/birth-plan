@@ -76,11 +76,12 @@
 | ---------------- | ---------- | ------------------------------ |
 | user             | references | null: false, foreign_key: true |
 | plan_name        | string     | null: false                    |
-| description      | text       | null: false                    |
+| thought          | text       | null: false                    |
 | hope_id          | integer    | null: false                    |
 | attend_id        | integer    | null: false                    |
 | contraction      | text       |                                |
 | childbirth       | text       |                                |
+| Breastfeeding_id | integer    | null: false                    |
 | postpartum       | text       |                                |
 | memo             | text       |                                |
 
@@ -88,6 +89,7 @@
 - belongs_to :user
 - belongs_to_active_hash :hope
 - belongs_to_active_hash :attend
+- belongs_to_active_hash :Breastfeeding
 - has_many :messages
 
 ## messagesテーブル

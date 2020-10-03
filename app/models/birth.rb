@@ -6,9 +6,10 @@ class Birth < ApplicationRecord
 
   with_options presence: true do
     validates :plan_name, length: { maximum: 40 }
-    validates :description, length: { maximum: 1000 }
+    validates :thought, length: { maximum: 1000 }
     validates :hope_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :attend_id, numericality: { other_than: 0, message: 'を選択してください' }
+    validates :Breastfeeding_id, numericality: { other_than: 0, message: 'を選択してください' }
   end
 
 end
