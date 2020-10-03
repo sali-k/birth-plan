@@ -4,8 +4,8 @@
     <%= form_with(model: @birth, local: true) do |f| %>
       <%= f.text_field :plan_name, placeholder: "plan_name" %>
       <%= f.text_field :description, placeholder: "description" %>
-      <%#= f.collection_select(:hope_id, Hope.all, :id, :name, {}, {class:"select-box", id:"birth-hope"}) %>
-      <%#= f.collection_select(:attend_id, Attend.all, :id, :name, {}, {class:"select-box", id:"birth-attend"}) %>
+      <%= f.collection_select(:hope_id, Hope.all, :id, :name, {}, {class:"select-box", id:"birth-hope"}) %>
+      <%= f.collection_select(:attend_id, Attend.all, :id, :name, {}, {class:"select-box", id:"birth-attend"}) %>
       <%= f.text_area :contraction, placeholder: "contraction", rows: "10" %>
       <%= f.text_area :childbirth, placeholder: "childbirth", rows: "10" %>
       <%= f.text_area :postpartum, placeholder: "postpartum", rows: "10" %>
