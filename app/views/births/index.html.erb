@@ -1,0 +1,10 @@
+<div class="contents row">
+  <% @births.each do |birth| %>
+    <%#div class="content_post" style="background-image: url(<%= birth.image %>);">
+      <p><%#= birth.text %></p>
+      <span class="name">
+        <%= birth.plan_name %>
+      </span>
+    </div>
+  <% end %>
+</div>
