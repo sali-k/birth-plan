@@ -9,8 +9,8 @@
             <%= f.text_field :plan_name, placeholder: "＜例：花子(妊婦さんのお名前)のバースプラン＞", class: 'form-control' %>
         </div>
         <div class = 'form-group'>
-          <p>Myバースプランのテーマ <span class="input-need">※必須</span></p>
-            <%= f.text_field :description, placeholder: "＜例１：パパと2人で協力して赤ちゃんを迎える！　例２：出産の思い出をいっぱい作る！＞", class: 'form-control' %>
+          <p>お産に対するイメージや想い <span class="input-need">※必須</span></p>
+            <%= f.text_field :thought, placeholder: "＜例１：パパと2人で協力して赤ちゃんを迎える！　例２：出産の思い出をいっぱい作る！＞", class: 'form-control' %>
         </div>
         <div class = 'form-group'>
           <p>立ち合い分娩の希望 <span class="input-need">※必須</span></p>
@@ -27,6 +27,10 @@
         <div class = 'form-group'>
           <p>赤ちゃんが生まれたときにしたいこと（分娩室にて） <span class="input-unneed">※任意</span></p>
             <%= f.text_area :childbirth, placeholder: "＜例１：夫よりも１番に赤ちゃんを抱っこしたい。　例２：家族3人で写真を撮りたい。＞", class: 'form-control', rows: "10" %>
+        </div>
+        <div class = 'form-group'>
+          <p>授乳に対する希望 <span class="input-need">※必須</span></p>
+            <%= f.collection_select(:breastfeeding_id, Attend.all, :id, :name, {}, {class: 'form-control', id:"birth-breastfeeding"}) %>
         </div>
         <div class = 'form-group'>
           <p>お産後の過ごし方や育児への希望 <span class="input-unneed">※任意</span></p>

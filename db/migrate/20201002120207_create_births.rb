@@ -8,7 +8,7 @@ class CreateBirths < ActiveRecord::Migration[6.0]
       t.integer :attend_id, null: false
       t.text :contraction
       t.text :childbirth
-      t.integer :Breastfeeding_id, null: false
+      t.integer :breastfeeding_id, null: false
       t.text :postpartum
       t.text :memo
       t.timestamps

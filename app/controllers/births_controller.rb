@@ -22,6 +22,6 @@ class BirthsController < ApplicationController
 
   private
   def birth_params
-    params.require(:birth).permit(:plan_name, :thought, :hope_id, :attend_id, :contraction, :Breastfeeding_id, :childbirth, :postpartum, :memo).merge(user_id: current_user.id)
+    params.require(:birth).permit(:plan_name, :thought, :hope_id, :attend_id, :contraction, :breastfeeding_id, :childbirth, :postpartum, :memo).merge(user_id: current_user.id)
   end
 end

@@ -81,7 +81,7 @@
 | attend_id        | integer    | null: false                    |
 | contraction      | text       |                                |
 | childbirth       | text       |                                |
-| Breastfeeding_id | integer    | null: false                    |
+| breastfeeding_id | integer    | null: false                    |
 | postpartum       | text       |                                |
 | memo             | text       |                                |
 
