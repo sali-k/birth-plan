@@ -5,39 +5,39 @@
       <%= render 'layouts/error_messages', model: f.object %>
         <div class = 'form-group'>
         <p>全ての入力項目は、登録後に編集ページにて変更可能です。</p>
-          <p>Myバースプラン名 <span class="input-need">※必須</span></p>
+          <%= f.label :plan_name %> <span class="input-need">※必須</span>
             <%= f.text_field :plan_name, placeholder: "＜例：花子(妊婦さんのお名前)のバースプラン＞", class: 'form-control' %>
         </div>
         <div class = 'form-group'>
-          <p>お産に対するイメージや想い <span class="input-need">※必須</span></p>
+          <%= f.label :thought %> <span class="input-need">※必須</span>
             <%= f.text_field :thought, placeholder: "＜例１：痛そうだけど、赤ちゃんに会えるのは楽しみ。　例２：夫と一緒に笑顔で赤ちゃんを迎えたい！＞", class: 'form-control' %>
         </div>
         <div class = 'form-group'>
-          <p>立ち合い分娩の希望 <span class="input-need">※必須</span></p>
+          <%= f.label :hope_id %> <span class="input-need">※必須</span>
             <%= f.collection_select(:hope_id, Hope.all, :id, :name, {}, {class: 'form-control', id:"birth-hope"}) %>
         </div>
         <div class = 'form-group'>
-          <p>立ち合い分娩をする人 <span class="input-need">※必須</span></p>
+          <%= f.label :attend_id %> <span class="input-need">※必須</span>
             <%= f.collection_select(:attend_id, Attend.all, :id, :name, {}, {class: 'form-control', id:"birth-attend"}) %>
         </div>
         <div class = 'form-group'>
-          <p>陣痛中の過ごし方 <span class="input-unneed">※任意</span></p>
+          <%= f.label :contraction %> <span class="input-unneed">※任意</span>
             <%= f.text_area :contraction, placeholder: "＜例１：夫に腰をさすって欲しい。　例２：好きな音楽を流したい。＞", class: 'form-control', rows: "10" %>
         </div>
         <div class = 'form-group'>
-          <p>赤ちゃんが生まれたときにしたいこと（分娩室にて） <span class="input-unneed">※任意</span></p>
+          <%= f.label :childbirth %> <span class="input-unneed">※任意</span>
             <%= f.text_area :childbirth, placeholder: "＜例１：夫よりも１番に赤ちゃんを抱っこしたい。　例２：家族3人で写真を撮りたい。＞", class: 'form-control', rows: "10" %>
         </div>
         <div class = 'form-group'>
-          <p>授乳に対する希望 <span class="input-need">※必須</span></p>
+          <%= f.label :breastfeeding_id %> <span class="input-need">※必須</span>
             <%= f.collection_select(:breastfeeding_id, Breastfeeding.all, :id, :name, {}, {class: 'form-control', id:"birth-breastfeeding"}) %>
         </div>
         <div class = 'form-group'>
-          <p>お産後の過ごし方や育児への希望 <span class="input-unneed">※任意</span></p>
+          <%= f.label :postpartum %> <span class="input-unneed">※任意</span>
             <%= f.text_area :postpartum, placeholder: "＜例１：母乳育児がしたい。　例２：沐浴の仕方を一緒に教えて欲しい。＞", class: 'form-control', rows: "10" %>
         </div>
         <div class = 'form-group'>
-          <p>メモ <span class="input-unneed">※任意</span></p>
+          <%= f.label :memo %> <span class="input-unneed">※任意</span></p>
             <%= f.text_area :memo, placeholder: "＜例１：癒しのオルゴールCDを持っていく。＞", class: 'form-control', rows: "10" %>
         </div>
           <%= f.submit "SEND", class: 'btn btn-primary' %>
