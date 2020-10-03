@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_120207) do
     t.integer "attend_id", null: false
     t.text "contraction"
     t.text "childbirth"
-    t.integer "Breastfeeding_id", null: false
+    t.integer "breastfeeding_id", null: false
     t.text "postpartum"
     t.text "memo"
     t.datetime "created_at", precision: 6, null: false
