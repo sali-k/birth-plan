@@ -1,17 +1,17 @@
-<div class="contents row">
-  <div class="container">
+<div class="container">
+  <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h3>Myバースプランの新規作成</h3>
+      <h3>Myバースプランの編集</h3>
       <%= form_with(model: @birth, local: true) do |f| %>
         <%= render 'layouts/error_messages', model: f.object %>
+
         <div class = 'form-group'>
-        <p>全ての入力項目は、登録後に編集ページにて変更可能です。</p>
           <%= f.label :plan_name %> <span class="input-need">※必須</span>
             <%= f.text_field :plan_name, placeholder: "＜例：花子(妊婦さんのお名前)のバースプラン＞", class: 'form-control', id: 'dish_name' %>
         </div>
         <div class = 'form-group'>
           <%= f.label :thought %> <span class="input-need">※必須</span>
-            <%= f.text_field :thought, size: "60x4", placeholder: "＜例：夫と一緒に笑顔で赤ちゃんを迎えたい！＞", class: 'form-control' %>
+            <%= f.text_field :thought, size: "60x4", placeholder: "＜例：夫と一緒に笑顔で赤ちゃんを迎えたい！＞", class: 'form-control', id: 'birth_thought' %>
         </div>
         <div class = 'form-group'>
           <%= f.label :hope_id %> <span class="input-need">※必須</span>
@@ -27,7 +27,7 @@
         </div>
         <div class = 'form-group'>
           <%= f.label :childbirth %> <span class="input-unneed">※任意</span>
-            <%= f.text_area :childbirth, placeholder: "＜例１：夫よりも１番に赤ちゃんを抱っこしたい。　例２：家族3人で写真を撮りたい。＞", class: 'form-control', rows: "10" %>
+            <%= f.text_area :childbirth, placeholder: "＜例１：夫よりも１番に赤ちゃんを抱っこしたい。　例２：家族3人で写真を撮りたい。＞", class: 'form-control', rows: "10", id: 'birth_childbirth'  %>
         </div>
         <div class = 'form-group'>
           <%= f.label :breastfeeding_id %> <span class="input-need">※必須</span>
@@ -35,13 +35,13 @@
         </div>
         <div class = 'form-group'>
           <%= f.label :postpartum %> <span class="input-unneed">※任意</span>
-            <%= f.text_area :postpartum, placeholder: "＜例１：母乳育児がしたい。　例２：沐浴の仕方を一緒に教えて欲しい。＞", class: 'form-control', rows: "10" %>
+            <%= f.text_area :postpartum, placeholder: "＜例１：母乳育児がしたい。　例２：沐浴の仕方を一緒に教えて欲しい。＞", class: 'form-control', rows: "10", id: 'birth_postpartum' %>
         </div>
         <div class = 'form-group'>
           <%= f.label :memo %> <span class="input-unneed">※任意</span></p>
-            <%= f.text_area :memo, placeholder: "＜例１：癒しのオルゴールCDを持っていく。＞", class: 'form-control', rows: "10" %>
+            <%= f.text_area :memo, placeholder: "＜例１：癒しのオルゴールCDを持っていく。＞", class: 'form-control', rows: "10", id: 'birth_memo' %>
         </div>
-          <%= f.submit "作成する", class: 'btn btn-primary' %>
+          <%= f.submit "更新する", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>

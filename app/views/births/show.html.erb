@@ -18,10 +18,10 @@
       <h4>メモ</h4>
         <h5><%= @birth.memo %></h5>
     <% if user_signed_in? && current_user.id == @birth.user_id %>
-      <ul class="col-md-9">
-        <li><%#= link_to '編集', edit_birth_path(@birth.id), method: :get %></li>
-        <li><%#= link_to '削除', birth_path(@birth.id), method: :delete %></li>
-      </ul>
+      <div class="change-birth">
+        <%= link_to "編集", edit_birth_path(@birth), class: 'edit-birth' %>
+        <%#= link_to '削除', birth_path(@birth.id), method: :delete %></li>
+      </div>
     <% end %>
   </div>
 </div>

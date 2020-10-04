@@ -21,6 +21,20 @@ class BirthsController < ApplicationController
     @birth = Birth.find(params[:id])
   end
 
+  def edit
+    @birth = Birth.find(params[:id])
+  end
+
+  def update
+    @birth = Birth.find(params[:id])
+    if @birth.update_attributes(birth_params)
+      flash[:success] = 'Myバースプランが更新されました！'
+      redirect_to @birth
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def birth_params
