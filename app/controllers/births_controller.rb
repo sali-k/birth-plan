@@ -35,6 +35,18 @@ class BirthsController < ApplicationController
     end
   end
 
+  def destroy
+    @birth = Birth.find(params[:id])
+    if user_signed_in? && current_user.id == @birth.user.id
+      if @birth.destroy
+        flash[:success] = "Myバースプランが削除されました"
+        redirect_to root_path
+      else
+        render :show
+      end
+    end
+  end
+
   private
 
   def birth_params
