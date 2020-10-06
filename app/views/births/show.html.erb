@@ -18,6 +18,7 @@
       <h4>メモ</h4>
         <h5><%= @birth.memo %></h5>
 
+      <% @comments  = @birth.feed_comment(@birth.id) %>
       <div class="comment">
         <%= render "comments/feed_comments" %>
         <%= render "comments/new" %>
