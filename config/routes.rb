@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get :use_of_terms, to: 'static_pages#terms'
   resources :users, only: [:index, :show]
   resources :births
+  resources :comments, only: [:create, :destroy]
 end

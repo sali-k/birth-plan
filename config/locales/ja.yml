@@ -15,3 +15,7 @@ ja:
         breastfeeding_id: 授乳に対する希望
         postpartum: お産後の過ごし方や育児への希望
         memo: メモ
+      comment:
+        user_id: コメント投稿者のID
+        dish_id: コメントされたバースプランのID
+        content: コメント

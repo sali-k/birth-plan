@@ -17,6 +17,12 @@
         <h5><%= @birth.postpartum %></h5>
       <h4>メモ</h4>
         <h5><%= @birth.memo %></h5>
+
+      <div class="comment">
+        <%= render "comments/feed_comments" %>
+        <%= render "comments/new" %>
+      </div>
+
     <% if user_signed_in? && current_user.id == @birth.user_id %>
       <div class="change-birth">
         <%= link_to "編集", edit_birth_path(@birth), class: 'edit-birth' %>

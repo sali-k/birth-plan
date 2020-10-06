@@ -68,7 +68,7 @@
 
 ### Association
 - has_many :births
-- has_many :messages
+- has_many :comments
 
 ## birthsテーブル
 
@@ -90,9 +90,9 @@
 - belongs_to_active_hash :hope
 - belongs_to_active_hash :attend
 - belongs_to_active_hash :Breastfeeding
-- has_many :messages
+- has_many :comments
 
-## messagesテーブル
+## commentsテーブル
 
 |     Column     |    Type    |            Options             |
 | -------------- | ---------- | ------------------------------ |

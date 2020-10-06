@@ -19,6 +19,8 @@ class BirthsController < ApplicationController
 
   def show
     @birth = Birth.find(params[:id])
+    @comment = Comment.new
+    @comments = @birth.comments.order(created_at: :asc)
   end
 
   def edit
