@@ -14,11 +14,13 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
+    @birth = @comment.birth_id
     if user_signed_in? && current_user.id == @comment.user_id
       @comment.destroy
-      redirect_to item_path(params[:item_id])
+      flash[:success] = "コメントを削除しました"
+      redirect_to birth_url(@birth)
     else
-      redirect_to item_path(params[:item_id]), alert: :'ログイン済みのコメント投稿者本人のみがコメントを削除できます'
+      redirect_to birth_url(@birth)
     end
   end
 end

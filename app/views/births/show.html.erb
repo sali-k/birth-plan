@@ -1,6 +1,15 @@
 <div class="row">
   <div class="col-md-9">
     <h3><%= @birth.plan_name %></h3>
+    
+    <% if user_signed_in? && current_user.id == @birth.user_id %>
+      <div class="change-birth">
+        <%= link_to "編集", edit_birth_path(@birth), class: 'edit-birth' %>
+        <%= link_to "削除", birth_path(@birth), method: :delete,
+                       data: { confirm: "選択したMyバースプランを削除します" } %>
+      </div>
+    <% end %>
+
       <h4>お産に対するイメージや想い</h5>
         <h5><%= @birth.thought %></h5>
       <h4>立ち合い分娩の希望</h4>
@@ -23,13 +32,5 @@
         <%= render "comments/feed_comments" %>
         <%= render "comments/new" %>
       </div>
-
-    <% if user_signed_in? && current_user.id == @birth.user_id %>
-      <div class="change-birth">
-        <%= link_to "編集", edit_birth_path(@birth), class: 'edit-birth' %>
-        <%= link_to "削除", birth_path(@birth), method: :delete,
-                       data: { confirm: "選択したMyバースプランを削除します" } %>
-      </div>
-    <% end %>
   </div>
 </div>
