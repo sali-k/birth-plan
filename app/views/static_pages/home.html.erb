@@ -1,28 +1,31 @@
-<div class='title-contents'>
-  <center>
-    <h1 class='service-title'>
-      バースプランへようこそ！
-    </h1>
-    <p class='service-explain'>
-      世界に１つだけのバースプランを作りませんか？
-    </p>
-    <p class='service-explain'>
-      家族全員で赤ちゃんを迎える準備をしましょう！
-    </p>
-    <div class='store-btn'>
-      <%#= link_to image_tag(".png", class:"apple-btn"), "#" %>
-      <%#= link_to image_tag(".png", class:"google-btn"), "#" %>
-      <% if user_signed_in? %>
-        <ul class="nav navbar-nav">
-          <li><%= link_to "バースプラン作成", new_birth_path, class: "btn btn-primary btn-lg btn-record" %></li>
-          <li><%= link_to "Myバースプラン", births_path(:id), class: "btn btn-primary btn-lg btn-record" %></li>
-        </ul>
-      <% else %>
-        <ul class="nav navbar-nav">
-          <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
-          <li><%= link_to "ユーザー登録", new_user_registration_path, class: "post" %></li>
-        </ul>
-      <% end %>
+<% if user_signed_in? %>
+  <div id="fh5co-portfolio">
+    <div class="container">
+      <div class="col-md-9">
+        <h3>バースプラン(<%#= @feed_items.count %>)</h3>
+      </div>
+      <div class="col-md-3">
+        <p><%= link_to "Myバースプランの作成", new_birth_path, class: "btn btn-primary btn-lg btn-demo btn-record" %></p>
+      </div>
     </div>
-  </center>
-</div>
+  </div>
+<% else %>
+  <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <div class="display-t js-fullheight">
+            <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+              <h1>家族と一緒に<br>自分だけのMyバースプランを作成</h1>
+              <h2>安心して赤ちゃんを迎えられる準備をしよう</h2>
+              <p>
+                <%= link_to 'バースプランを始める', signup_path, class: "btn btn-primary btn-lg btn-demo" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<% end %>
