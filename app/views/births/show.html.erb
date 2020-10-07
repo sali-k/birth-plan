@@ -24,7 +24,9 @@
                        data: { confirm: "選択したMyバースプランを削除します" } %>
       </div>
     <% end %>
+    <% @comments  = @dish.feed_comment(@dish.id) %>
     <div class="comment">
+      <%= render "comments/feed_comments" %>
       <%= render "comments/new" %>
     </div>
   </div>
