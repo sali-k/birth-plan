@@ -68,7 +68,7 @@
 
 ### Association
 - has_many :births
-- has_many :messages
+- has_many :comments
 
 ## birthsテーブル
 
@@ -90,14 +90,14 @@
 - belongs_to_active_hash :hope
 - belongs_to_active_hash :attend
 - belongs_to_active_hash :Breastfeeding
-- has_many :messages
+- has_many :comments
 
-## messagesテーブル
+## commentsテーブル
 
 |     Column     |    Type    |            Options             |
 | -------------- | ---------- | ------------------------------ |
-| user           | references | null: false, foreign_key: true |
-| birth          | references | null: false, foreign_key: true |
+| user_id        | integer    | null: false, foreign_key: true |
+| birth_id       | integer    | null: false, foreign_key: true |
 | content        | text       | null: false                    |
 
 ### Association
