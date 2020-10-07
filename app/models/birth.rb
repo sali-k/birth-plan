@@ -1,6 +1,7 @@
 class Birth < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
+  has_many :comments, dependent: :destroy
   belongs_to_active_hash :hope
   belongs_to_active_hash :attend
   belongs_to_active_hash :breastfeeding
