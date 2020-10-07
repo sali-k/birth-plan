@@ -19,6 +19,7 @@ class BirthsController < ApplicationController
 
   def show
     @birth = Birth.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit
