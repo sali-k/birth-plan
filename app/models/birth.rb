@@ -1,6 +1,7 @@
 class Birth < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
+  has_many :comments, dependent: :destroy
   belongs_to_active_hash :hope
   belongs_to_active_hash :attend
   belongs_to_active_hash :breastfeeding
@@ -19,4 +20,9 @@ class Birth < ApplicationRecord
     validates :attend_id, numericality: { other_than: 0, message: 'を選択してください' }
     validates :breastfeeding_id, numericality: { other_than: 0, message: 'を選択してください' }
   end
+
+  def feed_comment(birth_id)
+    Comment.where("birth_id = ?", birth_id)
+  end
+
 end
