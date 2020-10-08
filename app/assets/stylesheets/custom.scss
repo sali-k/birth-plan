@@ -184,3 +184,15 @@ footer {
 .comment-create-at {
   color: grey;
 }
+
+/* トップページのボタン */
+.birth-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #e26c6c;
+  border-color: #fff;
+}

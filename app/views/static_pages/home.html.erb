@@ -9,9 +9,7 @@
     <p class='service-explain'>
       家族全員で赤ちゃんを迎える準備をしましょう！
     </p>
-    <div class='store-btn'>
-      <%#= link_to image_tag(".png", class:"apple-btn"), "#" %>
-      <%#= link_to image_tag(".png", class:"google-btn"), "#" %>
+    <div class='birth-btn'>
       <% if user_signed_in? %>
         <ul class="nav navbar-nav">
           <li><%= link_to "バースプラン作成", new_birth_path, class: "btn btn-primary btn-lg btn-record" %></li>
