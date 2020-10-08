@@ -1,10 +1,11 @@
 <div class='title-contents'>
+  <div class="bg-mask">
   <center>
     <h1 class='service-title'>
       バースプランへようこそ！
     </h1>
     <p class='service-explain'>
-      世界に１つだけのバースプランを作りませんか？
+      世界に１つだけのMyバースプランを作りませんか？
     </p>
     <p class='service-explain'>
       家族全員で赤ちゃんを迎える準備をしましょう！
@@ -15,12 +16,8 @@
           <li><%= link_to "バースプラン作成", new_birth_path, class: "btn btn-primary btn-lg btn-record" %></li>
           <li><%= link_to "Myバースプラン", births_path(:id), class: "btn btn-primary btn-lg btn-record" %></li>
         </ul>
-      <% else %>
-        <ul class="nav navbar-nav">
-          <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
-          <li><%= link_to "ユーザー登録", new_user_registration_path, class: "post" %></li>
-        </ul>
       <% end %>
     </div>
   </center>
+  </div>
 </div>

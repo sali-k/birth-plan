@@ -1,6 +1,7 @@
+
 <div class="row">
   <div class="col-md-9">
-    <h3><%= @birth.plan_name %></h3>
+    <h1><%= @birth.plan_name %></h1>
     <% if user_signed_in? && current_user.id == @birth.user_id %>
       <div class="change-birth">
         <%= link_to "編集", edit_birth_path(@birth), class: 'edit-birth' %>
@@ -17,7 +18,7 @@
       <h4>陣痛中の過ごし方</h4>
         <h5><%= @birth.contraction %></h5>
       <h4>赤ちゃんが生まれたときにしたいこと（分娩室にて）</h4>
-        <h4><%= @birth.childbirth %></h5>
+        <h5><%= @birth.childbirth %></h5>
       <h4>授乳に対する希望</h4>
         <h5><%= @birth.breastfeeding.name %></h5>
       <h4>お産後の過ごし方や育児への希望</h4>

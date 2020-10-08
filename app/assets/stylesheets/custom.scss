@@ -82,8 +82,10 @@ footer {
 
 /* プロフィールページ */
 .title-profile {
+  color: #FF6699;
   padding-bottom: 10px;
   border-bottom: 1px solid #eaeaea;
+  font-weight: bold;
 }
 
 .show-user-name {
@@ -113,37 +115,26 @@ footer {
   background-repeat: no-repeat;
   background-position: top center;
   width: 100%;
-  height: 800px; 
+  height: 600px; 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 .service-title {
-  font-size: 8vh;
+  font-size: 7.5vh;
+  font-weight: bold;
+  color: #FF6699;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
 }
 
 .service-explain {
   font-size: 2.5vh;
   line-height: 40px;
-}
-
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 /* トップページ（ログイン後） */
@@ -160,6 +151,7 @@ footer {
 
 .input-unneed {
   font-size: 13px;
+  color: rgb(150, 150, 150);
 }
 
 /* 個別ページ */
@@ -193,6 +185,29 @@ footer {
 
 .btn-primary {
   color: #fff;
-  background-color: #e26c6c;
+  background-color: #FF6699;
   border-color: #fff;
+}
+
+/* Myバースプランの表示 */
+.row {
+  display: flex;
+  justify-content: center;
+  text-align-last: center;
+}
+
+.form-group {
+  color: #FF6699;
+  font-size: large;
+}
+
+.point-text{
+  font-size: 15px;
+  color: rgb(150, 150, 150);
+}
+
+/* メンバーの一覧 */
+.show-user-name {
+  color: #FF6699;
+  font-weight: bold;
 }
