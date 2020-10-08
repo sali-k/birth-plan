@@ -1,34 +1,35 @@
-
-<div class="row">
-  <div class="col-md-9">
-    <h1><%= @birth.plan_name %></h1>
-    <% if user_signed_in? && current_user.id == @birth.user_id %>
-      <div class="change-birth">
-        <%= link_to "編集", edit_birth_path(@birth), class: 'edit-birth' %>
-        <%= link_to "削除", birth_path(@birth), method: :delete,
+<div class="container">
+  <h1 class="title-profile"><%= @birth.plan_name %></h1>
+  <div class="row">
+    <div class="col-md-9">
+      <% if user_signed_in? && current_user.id == @birth.user_id %>
+        <div class="change-birth">
+          <%= link_to "編集", edit_birth_path(@birth), class: 'edit-birth' %>
+          <%= link_to "削除", birth_path(@birth), method: :delete,
                        data: { confirm: "選択したMyバースプランを削除します" } %>
+        </div>
+      <% end %>
+      <h4 class = 'theme-group' >お産に対するイメージや想い</h5>
+        <h5 class = 'theme-ontents'><%= @birth.thought %></h5>
+      <h4 class = 'theme-group' >立ち合い分娩の希望</h4>
+        <h5 class = 'theme-ontents'><%= @birth.hope.name %></h5>
+      <h4 class = 'theme-group' >立ち合い分娩をする人</h4>
+        <h5 class = 'theme-ontents'><%= @birth.attend.name %></h5>
+      <h4 class = 'theme-group' >陣痛中の過ごし方</h4>
+        <h5 class = 'theme-ontents'><%= @birth.contraction %></h5>
+      <h4 class = 'theme-group' >赤ちゃんが生まれたときにしたいこと（分娩室にて）</h4>
+        <h5 class = 'theme-ontents'><%= @birth.childbirth %></h5>
+      <h4 class = 'theme-group' >授乳に対する希望</h4>
+        <h5 class = 'theme-ontents'><%= @birth.breastfeeding.name %></h5>
+      <h4 class = 'theme-group' >お産後の過ごし方や育児への希望</h4>
+        <h5 class = 'theme-ontents'><%= @birth.postpartum %></h5>
+      <h4 class = 'theme-group' >メモ</h4>
+        <h5 class = 'theme-ontents'><%= @birth.memo %></h5>
+      <% @comments  = @birth.feed_comment(@birth.id) %>
+      <div class="comment">
+        <%= render "comments/feed_comments" %>
+        <%= render "comments/new" %>
       </div>
-    <% end %>
-      <h4>お産に対するイメージや想い</h5>
-        <h5><%= @birth.thought %></h5>
-      <h4>立ち合い分娩の希望</h4>
-        <h5><%= @birth.hope.name %></h5>
-      <h4>立ち合い分娩をする人</h4>
-        <h5><%= @birth.attend.name %></h5>
-      <h4>陣痛中の過ごし方</h4>
-        <h5><%= @birth.contraction %></h5>
-      <h4>赤ちゃんが生まれたときにしたいこと（分娩室にて）</h4>
-        <h5><%= @birth.childbirth %></h5>
-      <h4>授乳に対する希望</h4>
-        <h5><%= @birth.breastfeeding.name %></h5>
-      <h4>お産後の過ごし方や育児への希望</h4>
-        <h5><%= @birth.postpartum %></h5>
-      <h4>メモ</h4>
-        <h5><%= @birth.memo %></h5>
-    <% @comments  = @birth.feed_comment(@birth.id) %>
-    <div class="comment">
-      <%= render "comments/feed_comments" %>
-      <%= render "comments/new" %>
     </div>
   </div>
 </div>

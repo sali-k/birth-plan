@@ -206,8 +206,20 @@ footer {
   color: rgb(150, 150, 150);
 }
 
+/* Myバースプランの詳細 */
+.theme-group {
+  color: #FF6699;
+  font-size: large;
+  font-weight: bold;
+}
+
 /* メンバーの一覧 */
 .show-user-name {
   color: #FF6699;
   font-weight: bold;
+}
+.theme-ontents {
+  font-size:  15px;
+
+  margin: 20px 0 ;
 }
