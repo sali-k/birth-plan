@@ -223,3 +223,40 @@ footer {
 
   margin: 20px 0 ;
 }
+
+/* バースプランの紹介 */
+.introduction-content {
+  height: 450px ;
+  margin: 0 160px;
+}
+
+.introduction-name {
+  text-align: center;
+}
+
+.plan-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.plan-name {
+  font-size: 14px;
+  text-align: center;
+  background-color: #FFCCCC;
+  padding-right: 10px;
+}
+
+.one {
+  text-align: left;
+}
+
+.first-view {
+  height: 60vh;
+}
+
+.top-image {
+  height: 60%;
+  width: 100%;
+  margin-top: 10px;
+}
