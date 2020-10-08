@@ -8,7 +8,7 @@ BirthPlan(バースプラン)
  [BirthPlan] (https://birth-plan.herokuapp.com/)
 
 # テスト用アカウント
-- ログインemail:test@gmail.com
+- ログインemail:test1234@gmail.com
 - ログインパスワード:test1234
 - Basic認証 ID:admin
 - Basic認証 Pass:smile83
